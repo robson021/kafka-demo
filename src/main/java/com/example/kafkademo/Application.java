@@ -7,6 +7,7 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.*;
@@ -19,6 +20,7 @@ import static com.example.kafkademo.ConfigConstants.*;
 
 @EnableKafka
 @EnableScheduling
+@EnableReactiveMongoRepositories
 @SpringBootApplication
 public class Application {
 
