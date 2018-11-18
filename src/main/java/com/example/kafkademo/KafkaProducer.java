@@ -21,7 +21,7 @@ public class KafkaProducer {
         this.template = template;
     }
 
-    @Scheduled(fixedDelay = 10_000L)
+    @Scheduled(fixedDelay = 3_500L)
     public void publishData() {
         String message = UUID.randomUUID().toString();
         log.info("Sending message to Kafka: {}", message);
